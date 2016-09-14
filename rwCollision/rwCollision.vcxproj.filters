@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Objects">
+      <UniqueIdentifier>{4a668c9d-e276-4d12-9774-a1be54dc661e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="prototypy">
+      <UniqueIdentifier>{038ce185-b601-44d7-b9d2-c90f2da6a834}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\rwVector.cpp">
+      <Filter>Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="src\rwCollisionDetector.cpp">
+      <Filter>prototypy</Filter>
+    </ClCompile>
+    <ClCompile Include="src\rwDebugDataCollector.cpp" />
+    <ClCompile Include="src\rwDefinedFigures.cpp" />
+    <ClCompile Include="src\rwGJK.cpp" />
+    <ClCompile Include="src\rwMath.cpp" />
+    <ClCompile Include="src\rwMinkowskiSum.cpp" />
+    <ClCompile Include="src\rwPrimitiveIntersection.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\rwAABB.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="src\rwMesh.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="src\rwObjects.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="src\rwPolyhedron.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="src\rwSimplex.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="src\rwVector.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="src\rwVertexMap.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="src\rwCollisionDetector.h">
+      <Filter>prototypy</Filter>
+    </ClInclude>
+    <ClInclude Include="src\rwObject.h">
+      <Filter>prototypy</Filter>
+    </ClInclude>
+    <ClInclude Include="src\rwCollision.h" />
+    <ClInclude Include="src\rwCollisionDetectorBasic.h" />
+    <ClInclude Include="src\rwCollisionDetectorGJK.h" />
+    <ClInclude Include="src\rwDatatypes.h" />
+    <ClInclude Include="src\rwDebugDataCollector.h" />
+    <ClInclude Include="src\rwDefinedFigures.h" />
+    <ClInclude Include="src\rwGJK.h" />
+    <ClInclude Include="src\rwGlobals.h" />
+    <ClInclude Include="src\rwMath.h" />
+    <ClInclude Include="src\rwMinkowskiSum.h" />
+    <ClInclude Include="src\rwPhysicsSolver.h" />
+    <ClInclude Include="src\rwPrimitiveIntersection.h" />
+    <ClInclude Include="src\rwScene.h" />
+    <ClInclude Include="src\to-do.h" />
+    <ClInclude Include="src\rwRKIntegrator.h" />
+  </ItemGroup>
+</Project>

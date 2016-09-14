@@ -102,9 +102,9 @@ public:
 			(*it)->
 				getCollisionShape()->
 					setLinearVelocity( 
-						rwVect3(rand.randInt(avspeed)-avspeed*0.2,
-								rand.randInt(avspeed)-avspeed*0.2,
-								rand.randInt(avspeed)-avspeed*0.2
+						rwVect3(rand.randInt(avspeed)-avspeed*0.5,
+								rand.randInt(avspeed)-avspeed*0.5,
+								rand.randInt(avspeed)-avspeed*0.5
 						)
 					);
 			it++;

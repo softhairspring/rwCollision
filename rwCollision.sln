@@ -1,23 +1,21 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual C++ Express 2008
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Presentation", "Presentation\Presentation.vcproj", "{DBF8572E-F43B-4D54-9B89-CD8888E65AF6}"
-	ProjectSection(ProjectDependencies) = postProject
-		{B3C5A767-5014-429F-A47C-EDAB4F998C07} = {B3C5A767-5014-429F-A47C-EDAB4F998C07}
-		{035901A4-F61F-41C7-9539-A3C4AAA28D72} = {035901A4-F61F-41C7-9539-A3C4AAA28D72}
-	EndProjectSection
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "rwCollision", "rwCollision\rwCollision.vcproj", "{B3C5A767-5014-429F-A47C-EDAB4F998C07}"
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Presentation", "Presentation\Presentation.vcxproj", "{DBF8572E-F43B-4D54-9B89-CD8888E65AF6}"
 	ProjectSection(ProjectDependencies) = postProject
 		{035901A4-F61F-41C7-9539-A3C4AAA28D72} = {035901A4-F61F-41C7-9539-A3C4AAA28D72}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Tests", "Tests\Tests.vcproj", "{245410D5-8651-4B82-9B0B-7C91C8DD39AE}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "rwCollision", "rwCollision\rwCollision.vcxproj", "{B3C5A767-5014-429F-A47C-EDAB4F998C07}"
 	ProjectSection(ProjectDependencies) = postProject
-		{B3C5A767-5014-429F-A47C-EDAB4F998C07} = {B3C5A767-5014-429F-A47C-EDAB4F998C07}
+		{035901A4-F61F-41C7-9539-A3C4AAA28D72} = {035901A4-F61F-41C7-9539-A3C4AAA28D72}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "rwCommon", "..\..\lib\rwCommon\rwCommon\rwCommon.vcproj", "{035901A4-F61F-41C7-9539-A3C4AAA28D72}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Tests", "Tests\Tests.vcxproj", "{245410D5-8651-4B82-9B0B-7C91C8DD39AE}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "rwCommon", "..\rwCommon\rwCommon\rwCommon.vcxproj", "{035901A4-F61F-41C7-9539-A3C4AAA28D72}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

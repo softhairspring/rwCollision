@@ -11,7 +11,7 @@ class Actor {
 
 	friend ActorManager;
 	rwVect3 Color;
-	
+
 
 protected:
 	rwObject	*object;
@@ -21,24 +21,27 @@ public:
 
 	Actor(){
 		object = NULL;
-		mesh=NULL;
-		Color = rwVect3(0.1f,0.1f,0.4f);
+		mesh = NULL;
+		Color = rwVect3(0.1f, 0.1f, 0.4f);
 	}
 	~Actor(){
-		if(object )
+		if (object)
 			;
-		if(mesh)
+		if (mesh)
 			delete(mesh);
 	}
-	
+
 	bool init(rwObject *obj, rwMesh *m){
-		if(obj==NULL || m==NULL)
+		if (obj == NULL || m == NULL)
 			return NULL;
 		object = obj;
 		mesh = m;
 		return true;
 	}
 
+	void applyImpulse(rwVect3 force){
+		object->applyImpulse(force);
+	}
 
 	// akcesory
 	rwObject	*getCollisionShape()	{ return object; }

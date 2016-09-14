@@ -953,7 +953,7 @@ int simfpsaccumulator=0;
 #endif
 				//
 			if(RANDOMIZEVELOCITYFLAG){
-				poschange=600.0f;
+				poschange=1200.0f;
 				AM.randomizeVelocities( poschange );
 				RM.setACtionInfo("zwiekszono predkosc");
 				RANDOMIZEVELOCITYFLAG=false;
@@ -1284,5 +1284,19 @@ bool test2boxnc(){
 	
 
 return true;
+}
+
+//todo
+void shootMesh(){
+	/*
+	Actor *a = NULL;
+	string s("data/ico1-3.x");
+	ObjectFileData *ofd = OL.getMesh(s);
+	if (ofd == NULL)
+		return;
+	a = AM.getNewActor(rwVect3(0, 0, 0), ofd->points, ofd->mesh);
+	*/
+	//a->applyImpulse(camera.)
+
 }
 #endif

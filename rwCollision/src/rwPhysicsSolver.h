@@ -3,6 +3,7 @@
 
 #include "rwObjects.h"
 #include "Mersenne/MersenneTwister.h"
+#include "rwRKIntegrator.h"
 
 
 /**
@@ -11,9 +12,10 @@
 **/
 class rwPhysicsSolver {
 
-
+	rwRKIntegrator Integrator;
 	bool ISGRAVITATION;
 	MTRand rand;
+
 public:
 
 	rwPhysicsSolver(){
@@ -27,6 +29,8 @@ public:
 		return pos;
 	}
 
+
+	//simplest mockup - movement only along velocity vector
 	bool step(ObjectsList &list, float timestep){
 		rwObject * o;
 		rwVect3 v;
@@ -34,17 +38,37 @@ public:
 		while(it != list.end() ){
 			o = *it;
 			v = o->vel_linear;
+			//dont move static object
+			if (o->ISSTATIC){
+				it++;
+				continue;
+			}
 			///brak kolizji
 			if( ! o->isColliding() ) {
-				o->setPosition (  o->position + ( o->vel_linear * timestep ) );
+				//o->setPosition (  o->position + ( o->vel_linear * timestep ) );
+				State s;
+				s.x = o->position;
+				s.v = o->vel_linear;
+				Integrator.integrate(s, 0, timestep);
+				o->position=s.x;
+				o->vel_linear = s.v;
+
 			}
 			else{///kolizja
 				
 				//o->setLinearVelocity(  -  o->vel_linear + o->vel_linear*0.008f);	//male spowalnianie
-				o->setLinearVelocity( - o->vel_linear );
+				//o->setLinearVelocity( - o->vel_linear );
 				
-				o->setPosition( o->position + (o->getLinearVelocity()*timestep) );
-
+				//old
+				//o->setPosition( o->position + (o->getLinearVelocity()*timestep) );
+				//RK4
+				State s;
+				s.x = o->position;
+				s.v = -o->vel_linear;
+				Integrator.integrate(s, 0, timestep);
+				// minus
+				o->position = s.x;
+				o->vel_linear =  s.v;
 			}
 			///grawitacja
 			//if(ISGRAVITATION)
