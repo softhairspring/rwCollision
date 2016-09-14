@@ -13,8 +13,8 @@
   #include <UnitTest++.h>
 
 
-#include "../../rwCollision/src/rwCollision.h"
-#include "../Presentation/src/ObjectLoader.h"
+#include "rwCollision.h"
+#include "ObjectLoader.h"
 
 using namespace std;
 using namespace rwFigures;

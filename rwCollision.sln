@@ -14,8 +14,14 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "rwCollision", "rwCollision\
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Tests", "Tests\Tests.vcxproj", "{245410D5-8651-4B82-9B0B-7C91C8DD39AE}"
+	ProjectSection(ProjectDependencies) = postProject
+		{035901A4-F61F-41C7-9539-A3C4AAA28D72} = {035901A4-F61F-41C7-9539-A3C4AAA28D72}
+		{64A4FEFE-0461-4E95-8CC1-91EF5F57DBC6} = {64A4FEFE-0461-4E95-8CC1-91EF5F57DBC6}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "rwCommon", "..\rwCommon\rwCommon\rwCommon.vcxproj", "{035901A4-F61F-41C7-9539-A3C4AAA28D72}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UnitTest++.vsnet2005", "UnitTest++\UnitTest++.vsnet2005.vcxproj", "{64A4FEFE-0461-4E95-8CC1-91EF5F57DBC6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +45,10 @@ Global
 		{035901A4-F61F-41C7-9539-A3C4AAA28D72}.Debug|Win32.Build.0 = Debug|Win32
 		{035901A4-F61F-41C7-9539-A3C4AAA28D72}.Release|Win32.ActiveCfg = Release|Win32
 		{035901A4-F61F-41C7-9539-A3C4AAA28D72}.Release|Win32.Build.0 = Release|Win32
+		{64A4FEFE-0461-4E95-8CC1-91EF5F57DBC6}.Debug|Win32.ActiveCfg = Debug|Win32
+		{64A4FEFE-0461-4E95-8CC1-91EF5F57DBC6}.Debug|Win32.Build.0 = Debug|Win32
+		{64A4FEFE-0461-4E95-8CC1-91EF5F57DBC6}.Release|Win32.ActiveCfg = Release|Win32
+		{64A4FEFE-0461-4E95-8CC1-91EF5F57DBC6}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
