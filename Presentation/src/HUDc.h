@@ -1,12 +1,18 @@
-
+/**
+* \author       Robert Widziszewski https://github.com/softhairspring
+* \copyright    https://opensource.org/licenses/MIT License
+*/
 #ifndef HUD_H
 #define HUD_H
-
 
 #include "gl\gl.h"			// Header File For The OpenGL32 Library
 #include "gl\glu.h"			// Header File For The GLu32 Library
 
 
+/***
+
+Head Up Display used to show basic info like fps, or some other variables
+*/
 
 
 // //

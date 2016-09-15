@@ -1,3 +1,7 @@
+/**
+* \author       Robert Widziszewski https://github.com/softhairspring
+* \copyright    https://opensource.org/licenses/MIT License
+*/
 #ifndef COLLISION_DETECTORBASIC_H
 #define COLLISION_DETECTORBASIC_H
 
@@ -10,6 +14,8 @@ using namespace std;
 
 
 /*
+Unfinished unused!
+
 NIEDOKONCZONA nieuzywana
 Klasa wykrywajaca kolizje miedzy obiektami metod¹ naiwn¹.
 Klasa nie powinna modyfikowac obiektow bezposrednio - tylko przez inne klasy

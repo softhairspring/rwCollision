@@ -1,3 +1,7 @@
+/**
+* \author       Robert Widziszewski https://github.com/softhairspring
+* \copyright    https://opensource.org/licenses/MIT License
+*/
 #ifndef DATATYPES_H
 #define DATATYPES_H
 //flagi typów obiektów (dla zmiany typów)

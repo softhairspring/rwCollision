@@ -1,3 +1,7 @@
+/**
+* \author       Robert Widziszewski https://github.com/softhairspring
+* \copyright    https://opensource.org/licenses/MIT License
+*/
 #ifndef RWFACE_H
 #define RWFACE_H
 
@@ -13,6 +17,8 @@ struct rwFace{
 };
 
 /**
+* 3d object's mesh
+
 * klasa opisujaca siatke bry³y
 * rwFace to numery punktów figury
 **/

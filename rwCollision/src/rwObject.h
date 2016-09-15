@@ -1,3 +1,7 @@
+/**
+* \author       Robert Widziszewski https://github.com/softhairspring
+* \copyright    https://opensource.org/licenses/MIT License
+*/
 #ifndef OBJECT_H
 #define OBJECT_H
 

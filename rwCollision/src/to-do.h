@@ -12,7 +12,6 @@ v extrude AABB
 - dokonczenie GJK tak zeby byla mozliwa parametryzacja i wlasne klasy do wykrywania kolizji 
 z mysla o kolejnych algorytmach
 - implementacja wykrywania punktu kolizji (triangle ray)
-przeinaczenie GJK nie do Poznania i Łodzi
 - stowrzenie "ladnego" renderowania obiektow
 
 
@@ -26,7 +25,7 @@ Update klatki animacji
 
 schemat iteracji:
 rozciągnij OBB dla szybkich obiektów
-(optymalizacja sweep&prune czy czyms)
+(optymalizacja sweep&prune)
 sprawdz kolizje OBB
 dla kolidującej pary
 	scenariusz 1(mój):
@@ -38,7 +37,7 @@ dla kolidującej pary
 		jesli jest kolizja
 			obsluz odpowiedz na kolizje
 	scenariusz 2:
-		rozciągnij obiekty i traktuj jak convex hulle
+		rozciągnij obiekty i traktuj jak convex hull'e
 		sprawdz kolizje GJK na hullach
 			kolizja musi nastąpić
 			przesuń obiekty w odpowiednie mijesca dla kolizji wzgledem punktu kolizji

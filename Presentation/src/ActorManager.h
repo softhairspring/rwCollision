@@ -1,6 +1,9 @@
+/**
+* \author       Robert Widziszewski https://github.com/softhairspring
+* \copyright    https://opensource.org/licenses/MIT License
+*/
 #ifndef ACTORMANAGER_H
 #define ACTORMANAGER_H
-
 #include <list>
 
 #include "Actor.h"
@@ -13,7 +16,7 @@ using namespace std;
 typedef list<Actor*> ActorsList;
 
 /**
-Manadzer obiektów(Actor) sceny
+Actor factory, alsokeeps track of all actors
 **/
 class ActorManager {
 

@@ -1,4 +1,7 @@
-
+/**
+* \author       Robert Widziszewski https://github.com/softhairspring
+* \copyright    https://opensource.org/licenses/MIT License
+*/
 
 #ifndef RENDERMANAGER_H
 #define RENDERMANAGER_H
@@ -23,6 +26,9 @@
 typedef list<rwObject*> ObjectsList;
 
 /**
+Responsible for rendering on screen using OpenGL 1 convention.
+
+
 Klasa zarz¹dzaj¹ca wyœwietlaniem grafiki OpenGL
 **/
 class RenderManager {

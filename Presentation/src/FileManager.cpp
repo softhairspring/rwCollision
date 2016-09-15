@@ -1,3 +1,7 @@
+/**
+* \author       Robert Widziszewski https://github.com/softhairspring
+* \copyright    https://opensource.org/licenses/MIT License
+*/
 #ifndef FILEMANAGER_C
 #define FILEMANAGER_C
 
@@ -13,7 +17,7 @@ FileManager::~FileManager(){
 		;
 }
 /**
-* zwraca stream do pliku *.x
+* returns stream to .x file
 **/
 ifstream* FileManager::getDxFile(std::string* path){
 
@@ -37,7 +41,7 @@ ifstream* FileManager::getDxFile(std::string &path){
 }
 
 /**
-*otworzenie pliku i zwrocenie jego bufora
+* returns stram to a file
 **/
 ifstream* FileManager::getFileStream(char *f){
 		if(f==NULL)

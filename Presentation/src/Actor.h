@@ -1,3 +1,7 @@
+/**
+* \author       Robert Widziszewski https://github.com/softhairspring
+* \copyright    https://opensource.org/licenses/MIT License
+*/
 #ifndef ACTOR_H
 #define ACTOR_H
 #include "rwCollision.h"
@@ -5,7 +9,7 @@
 class ActorManager;
 
 /**
-Aktor przechowywuje dane o bryle na scenie
+3d mesh entity in scene
 **/
 class Actor {
 

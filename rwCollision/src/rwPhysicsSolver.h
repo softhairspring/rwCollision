@@ -1,3 +1,7 @@
+/**
+* \author       Robert Widziszewski https://github.com/softhairspring
+* \copyright    https://opensource.org/licenses/MIT License
+*/
 #ifndef RWPHYSICSSOLVER_H
 #define RWPHYSICSSOLVER_H
 

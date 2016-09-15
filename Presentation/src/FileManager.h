@@ -1,4 +1,7 @@
-//FileManager
+/**
+* \author       Robert Widziszewski https://github.com/softhairspring
+* \copyright    https://opensource.org/licenses/MIT License
+*/
 #ifndef FILEMANAGER_H
 #define FILEMANAGER_H
 #include <iostream>
@@ -6,6 +9,10 @@
 
 using namespace std;
 
+
+/***
+Used to load directx files.
+*/
 class FileManager {
 protected:
 

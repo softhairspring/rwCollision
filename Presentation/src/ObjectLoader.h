@@ -1,3 +1,7 @@
+/**
+* \author       Robert Widziszewski https://github.com/softhairspring
+* \copyright    https://opensource.org/licenses/MIT License
+*/
 #ifndef OBJECTLOADER_H
 #define OBJECTLOADER_H
 #include "rwCollision.h"
@@ -6,6 +10,9 @@
 
 using namespace std;
 
+
+/**
+**/
 struct ObjectFileData {
 	vector<rwVect3> *points;
 	rwMesh			*mesh;
@@ -13,6 +20,8 @@ struct ObjectFileData {
 };
 
 /**
+DirectX file parser, loads all mesh data.
+
 Klasa odpowiedzialna za ³adowanie obiektów z pliku do programu.
 **/
 class ObjectLoader : public FileManager{

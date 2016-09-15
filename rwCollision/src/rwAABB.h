@@ -1,3 +1,7 @@
+/**
+* \author       Robert Widziszewski https://github.com/softhairspring
+* \copyright    https://opensource.org/licenses/MIT License
+*/
 #ifndef RWAABB_H
 #define RWAABB_H
 
@@ -8,6 +12,8 @@
 using namespace std;
 
 /**
+*	Axis aligned bounding box used for erly collision detection
+
 *	Figura ograaniczajaca prawdziwy obiekt
 **/
 struct rwAABB {

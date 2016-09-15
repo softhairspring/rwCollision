@@ -1,6 +1,10 @@
 #ifndef VECTOR_H
 #define VECTOR_H
 
+/**
+* \author       Robert Widziszewski https://github.com/softhairspring
+* \copyright    https://opensource.org/licenses/MIT License
+*/
 #include "rwMath.h"
 #include <assert.h>
 
@@ -10,7 +14,7 @@
 	
 
 /**
-* wektor przestrzeni 3D
+* three dimensional vector
 **/
 class rwVect3 {
 public:

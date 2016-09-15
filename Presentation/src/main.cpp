@@ -1,3 +1,7 @@
+/**
+* \author       Robert Widziszewski https://github.com/softhairspring
+* \copyright    https://opensource.org/licenses/MIT License
+*/
 #ifndef MAIN_PRESENTATION
 #define MAIN_PRESENTATION
 
@@ -18,11 +22,12 @@
 #include "Mersenne/MersenneTwister.h"
 using namespace std;
 
-///zmienna PROFILER w³¹cza zapisywanie danych do pliku .db o prêdkosci wykonywania wybranych fragmentów kodu
+
+///when PROFILER is defined, code execution time of some methods is stored in .db file
 //#define PROFILER
 
 #define _GAMESTATE GameStateControler::getState()
-//dane windows
+//windows vars
 HDC			hDC=NULL;		// Private GDI Device Context
 HGLRC		hRC=NULL;		// Permanent Rendering Context
 HWND		hWnd=NULL;		// Holds Our Window Handle
@@ -38,7 +43,7 @@ bool	blend;				// Blending ON/OFF
 
 
 
-//dane openGL
+//OpenGL 
 const float piover180 = 0.0174532925f;
 float heading;
 float xpos;
@@ -53,10 +58,10 @@ int		GLwidth =1024;//800;
 RECT screensize;
 
 float cameraposition = -25.0f;
-int fps=0;		//mierzy klatki/sek wyswietlane
-int simfps=0;	//do mierzenia predkosci symulacji
+int fps=0;		
+int simfps=0;	//speed of the simulation
 bool RANDOMIZEVELOCITYFLAG=false; //flaga wywolania zmiany predkosci
-bool ISRENDERACTORS=true; //wyswietlanie obiektow
+bool ISRENDERACTORS=true; //
 //dane rwCommon
 rwFrameTimer FT;
 //dane rwCollision:
@@ -86,7 +91,11 @@ bool test2boxnc();
 bool testnr1(int dsquare);
 bool testnr2(int dsquare);
 bool testnr4(int dsquare);
+
 ///prosty struct uzywany do zatrzymywania klatek i zwalniania animacji
+/**
+Used to stop or slow down simulation
+*/
 struct FrameLimiter {
 
 	bool LOCKSIMULATION;	//zatrzymaj symulacje
@@ -104,8 +113,9 @@ struct FrameLimiter {
 }	FL;
 
 
-///prosty kontroler
-///poruszajacy sie po sferze wokol O
+/**
+Trivial camera controler that moves around axis
+*/
 struct CameraControl {
 	//rwVect3 Position;
 	float xrot;
@@ -173,9 +183,9 @@ void readstr(FILE *f,char *string)
 
 
 
-// 
-//tworzenie czcionki dla OpenGL w formie bitmapy
-//
+/**
+Creates font bitmap
+*/
 GLuint	base;				// Base Display List For The Font Set
 GLfloat	cnt1;				// 1st Counter Used To Move Text & For Coloring
 GLfloat	cnt2;				// 2nd Counter Used To Move Text & For Coloring
@@ -208,14 +218,14 @@ GLvoid BuildFont(GLvoid)
 	DeleteObject(font);									
 }
 
-//zniszczenie elementow czcionki
+//destroys font data
 GLvoid KillFont(GLvoid)									
 {
 	glDeleteLists(base, 96);							
 }
 
 // 
-//zmienia rozmiar okna
+//resize window
 //
 GLvoid ReSizeGLScene(GLsizei width, GLsizei height)		
 {
@@ -260,7 +270,7 @@ int InitGL(GLvoid)										// All Setup For OpenGL Goes Here
 //
 //					DRAW
 //
-//g³ówna funkcja rysuj¹ca zawartoœæ okna
+//
 int DrawGLScene(GLvoid)									// Here's Where We Do All The Drawing
 {
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);	// Clear The Screen And The Depth Buffer
@@ -316,7 +326,7 @@ int DrawGLScene(GLvoid)									// Here's Where We Do All The Drawing
 }
 
 //
-//niszczy okno
+//
 //
 GLvoid KillGLWindow(GLvoid)								// Properly Kill The Window
 {
@@ -360,7 +370,7 @@ GLvoid KillGLWindow(GLvoid)								// Properly Kill The Window
 }
 
 /**
-fukcja tworzy okno z wykorzystaniem OpenGL
+Creates window using OpenGL
 **/
  
 BOOL CreateGLWindow(char* title, int width, int height, int bits, bool fullscreenflag)
@@ -536,8 +546,7 @@ BOOL CreateGLWindow(char* title, int width, int height, int bits, bool fullscree
 
 
 /**
-obsluga zdarzeñ systemowych
-obs³uga wejœcia u¿ytkownika(klawiatura, mysz)
+Handling of system events and user input
 */
 LRESULT CALLBACK WndProc(	HWND	hWnd,			// Handle For This Window
 							UINT	uMsg,			// Message For This Window
@@ -1006,7 +1015,7 @@ int simfpsaccumulator=0;
 	return (msg.wParam);								
 }
 
-//fukcja dodaj¹ca œciany szeœcianu(pomieszczenie)
+//Adds large Bounding wall on scene, so nothing escapes to fr from view
 bool addBorders(){
 
 	Actor    * a=NULL;
