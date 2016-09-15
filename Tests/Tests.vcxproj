@@ -104,9 +104,6 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\rwCommon\rwCommon\rwCommon.vcxproj">
-      <Project>{035901a4-f61f-41c7-9539-a3c4aaa28d72}</Project>
-    </ProjectReference>
     <ProjectReference Include="..\rwCollision\rwCollision.vcxproj">
       <Project>{b3c5a767-5014-429f-a47c-edab4f998c07}</Project>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>

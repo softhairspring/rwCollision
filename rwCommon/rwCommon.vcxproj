@@ -11,18 +11,19 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{DBF8572E-F43B-4D54-9B89-CD8888E65AF6}</ProjectGuid>
-    <RootNamespace>Presentation</RootNamespace>
+    <ProjectGuid>{035901A4-F61F-41C7-9539-A3C4AAA28D72}</ProjectGuid>
+    <RootNamespace>rwCommon</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <PlatformToolset>v120</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
     <WholeProgramOptimization>true</WholeProgramOptimization>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <PlatformToolset>v120</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
@@ -40,74 +41,65 @@
     <_ProjectFileVersion>12.0.30501.0</_ProjectFileVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <OutDir>$(SolutionDir)/lib\</OutDir>
     <IntDir>$(Configuration)\</IntDir>
-    <IncludePath>D:\temp\rwCollision\rwCollision\src;D:\temp\rwCommon\rwCommon\src;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <OutDir>$(SolutionDir)/lib\</OutDir>
     <IntDir>$(Configuration)\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader />
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
     </ClCompile>
-    <Link>
-      <AdditionalDependencies>opengl32.lib;glu32.lib;Winmm.lib;rwCommonD.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>D:\temp\rwCollision\lib;lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-      <TargetMachine>MachineX86</TargetMachine>
-    </Link>
+    <Lib>
+      <OutputFile>$(OutDir)rwCommonD.lib</OutputFile>
+    </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
       <Optimization>MaxSpeed</Optimization>
-      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader />
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <AdditionalIncludeDirectories>D:\_dev\rwCommon\rwCommon\src;D:\_dev\rwCollision\rwCommon\rwCommon\src;D:\_dev\rwCollision\rwCollision\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
-    <Link>
-      <AdditionalDependencies>opengl32.lib;glu32.lib;Winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-      <OptimizeReferences>true</OptimizeReferences>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <TargetMachine>MachineX86</TargetMachine>
-    </Link>
+    <Lib>
+      <OutputFile>$(OutDir)rwCommon.lib</OutputFile>
+    </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\FileManager.cpp" />
-    <ClCompile Include="src\main.cpp" />
-    <ClCompile Include="src\Mersenne\mtrand.cc" />
-    <ClCompile Include="src\ObjectLoader.cpp" />
-    <ClCompile Include="src\Render.cpp" />
+    <ClCompile Include="src\custom_time.cpp" />
+    <ClCompile Include="src\profile.cpp" />
+    <ClCompile Include="src\rwCommon.cpp" />
+    <ClCompile Include="src\rwFileParser.cpp" />
+    <ClCompile Include="src\rwLogger.cpp" />
+    <ClCompile Include="src\rwLogLevel.cpp" />
+    <ClCompile Include="src\text.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Actor.h" />
-    <ClInclude Include="src\ActorManager.h" />
-    <ClInclude Include="src\FileManager.h" />
-    <ClInclude Include="src\HUDc.h" />
-    <ClInclude Include="src\Mersenne\MersenneTwister.h" />
-    <ClInclude Include="src\Mersenne\mtrand.h" />
-    <ClInclude Include="src\ObjectLoader.h" />
-    <ClInclude Include="src\Render.h" />
-    <ClInclude Include="src\RenderManager.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\rwCollision\rwCollision.vcxproj">
-      <Project>{b3c5a767-5014-429f-a47c-edab4f998c07}</Project>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
+    <ClInclude Include="src\custom_time.h" />
+    <ClInclude Include="src\def.h" />
+    <ClInclude Include="src\objpool.h" />
+    <ClInclude Include="src\profile.h" />
+    <ClInclude Include="src\rwCommon.h" />
+    <ClInclude Include="src\rwFileParser.h" />
+    <ClInclude Include="src\rwFrameTimer.h" />
+    <ClInclude Include="src\rwLogger.h" />
+    <ClInclude Include="src\rwLogLevel.h" />
+    <ClInclude Include="src\singleton.h" />
+    <ClInclude Include="src\text.h" />
+    <ClInclude Include="src\to-do.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
